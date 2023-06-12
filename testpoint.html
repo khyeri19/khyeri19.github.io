@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+        <style>
+            body { margin: 0; padding: 0; }
+            #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+        </style>
+    </head>
+    <body>
+        <div id='map'></div>
+            <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoiYnJpY2tlciIsImEiOiJULVRnSlZZIn0.LHt8a4ByC-_b4ytgeh7H5Q';
+
+            var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+            center: [4.9041, 52.3676], // starting position [lng, lat]
+            zoom: 7 // starting zoom
+            });
+
+            map.on('load', function () {
+                map.loadImage(
+                    'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+                    function (error, image) {
+                        if (error) throw error;
+                map.addImage('custom-marker', image);
+                        // load the castles file
+                map.addSource('castles', {
+                            'type': 'geojson',
+                            'data': 'castles.geojson'
+                        });
+
+
+
+
+                        // Add a symbol layer
+                        map.addLayer({
+                            'id': 'points',
+                            'type': 'symbol',
+                            'source': 'castles',
+                            'layout': {
+                                'icon-image': 'custom-marker',
+                                // get the title name from the source's "naam" property
+                                'text-field': ['get', 'naam'],
+                                'text-font': [
+                                    'Open Sans Semibold',
+                                    'Arial Unicode MS Bold'
+                                ],
+                                'text-offset': [0, 1.25],
+                                'text-anchor': 'top'
+                            }
+                        });
+                    }
+                );
+            });
+
+            </script>
+    </body>
+</html>

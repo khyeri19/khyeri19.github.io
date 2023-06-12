@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Folder>
+ <name>Aruba_test</name>
+ <description>DSM preview overlay</description>
+ <GroundOverlay>
+   <name>DSM preview overlay</name>
+   <description>DSM preview overlay</description>
+   <Icon><href>//soliscom.uu.nl/users/Ricke003/My Documents/pix4d/Aruba_test/1_initial/report/html/dsm_preview.png</href></Icon>
+   <LatLonBox>
+     <north>12.5621</north>
+     <south>12.5617</south>
+     <east>-70.0338</east>
+     <west>-70.0343</west>
+     <rotation>-0.1556640799496235</rotation>
+   </LatLonBox>
+ </GroundOverlay>
+</Folder>
+</kml>
