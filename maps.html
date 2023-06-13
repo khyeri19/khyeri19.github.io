@@ -13,6 +13,7 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112768571-1"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -21,6 +22,7 @@
   gtag('config', 'UA-112768571-1');
 </script>
 	</head>
+	
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -73,7 +75,9 @@
 										</a></h2>
 									</header>
 									<a href="#" class="image fit"><img src="images/SDGfinal.jpeg"></a>
-									<p>Static maps will always be relevant. The aim of a static map is to quickly and easily communicate a clear story. The cartographer should do the work for the reader. More tips and tricks about good cartographic principles please download my open access book <b><a href="https://digitallibrary.un.org/record/3898826">Mapping for a Sustainable World.</a></b>  Did you know you can make static maps with <a href="https://support.microsoft.com/en-us/office/create-a-map-chart-in-excel-f2cfed55-d622-42cd-8ec9-ec8a358b593b">Microsoft Excel 2016</a>? I make static maps mostly using QGIS. </p>
+									<p>
+									This is a static choropleth map created with QGIS, illustrating the <b>Prevalence of Undernourishment (SDG Indicator 2.1.1)</b> as a proportion of millions of people in 2020. SDG 2 aims to eradicate hunger, achieve food security, improve nutrition, and promote sustainable agriculture. Prevalence of undernourishment refers to the estimated proportion of the population whose habitual food consumption is insufficient to maintain a normal, active, and healthy life, expressed as a percentage. The data for this map was obtained from <a href= "https://unstats.un.org/sdgs/dataportal/database">the UN Statistics page</a>. Following that, the data underwent cleaning using Microsoft Excel, and subsequently, it was plotted and styled using QGIS. The countries labeled on the map represent those with a percentage exceeding 40%.
+									</p>
 									
 								</article>
 
@@ -86,7 +90,9 @@
 									
     <iframe src="https://uni-utrecht.maps.arcgis.com/apps/instant/media/index.html?appid=eb93de633853489faf8632dd78fb4c07&locale=en-US" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
   
-   <p>The Modifiable Aerial Unit Problem is illustrated in this interactive example showing the Sustainable Development Goal Indicator 2.1.1 Prevalence of Undernourishment as a proportion to millions of people in 2010 and 2020. What patterns change based on the aerial unit? Why would that be?</p>
+   <p>Continuing from the static map, this is an interactive example illustrating <b>SDG Indicator 2.1.1 as a proportion of millions of people in both 2010 and 2020</b>. The map was created by plotting the cleaned data with Microsoft Excel and utilizing ArcGIS Online to generate an instant app with interactive features. By examining the map, you can identify areas that have undergone significant changes between the two time periods. These changes may be reflected in variations in the prevalence of undernourishment across different regions. Some areas may have experienced improvements, indicating a reduction in the proportion of undernourished individuals, while others may have witnessed deterioration, suggesting an increase in undernourishment levels. <br>
+
+In which area do you notice the most significant changes? Which area showed improvement or deterioration? What could be the reasons behind these changes?</p>
     </article>
 								
 								<article>
@@ -96,14 +102,10 @@
 									</header>
 									 
     <iframe src="https://khyeri0323.users.earthengine.app/view/tokyo-japan-cherry-blossom" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
-									<p>Above is an example displaying elevation in the Netherlands. Red is 6 meters high while dark blue is 1 meter above sea level. Derived from LiDAR imagery. Remote Sensing has always and will always produce big data. Google Earth Engine is a tool for big spatial data wrangling. I have lead several student projects related to monitoring change over time-related to carbon emission, carbon sequestration, forest cover change, and more. Remotely sensed satellite imagery is free, open-source, big data with countless research opportunities limited only by our imagination. </p>
+									<p>What a peculiar-looking map! Here, different cloudless bands of Sentinel 2 data are rendered to display the healthy vegetation of cherry blossoms in Tokyo, Japan. The created layers do not cover the entire extent of Tokyo due to the presence of numerous clouds, which hampers remote sensing. There are five different layers available for exploration. You can choose between the peak season (March 25th to April 5th, 2023) and the offseason (November 1st to December 1st, 2022), as well as the color of the layer, selecting between true colors and false colors. (To view the true and false color layers of the off and peak seasons better, you can disable the True Color Landsat layer, which renders Landsat 9 data.)</p>
 									
 								</article>
-						
-						
-						
-						
-						
+				
 						
 								<article>
 									<header>
@@ -112,7 +114,7 @@
 									</header>
 									 
     <iframe src="https://www.arcgis.com/apps/mapviewer/index.html?webmap=b387fd3823f2430d86be43cab679f2e3&extent=5.18,52.0725,5.1808,52.0728" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
-									<p>Above is an example of a map of SDG 15: Life on Earth created with the data collected from a mobile app made with ArcGIS Online. Each points are collected by the users at their location, and it consists of information about flower they see: size, color, occupied land area, name, freshness, and so on. You can always try it yourself via <a href= "https://fieldmaps.arcgis.app?referenceContext=center&itemID=b387fd3823f2430d86be43cab679f2e3&center=52.08277795215754,5.1496860249323&scale=2196.104817637565">this link!</a></p>
+									<p>Above is an example of a map of SDG 15: Life on Earth created with the data collected from a mobile app made with ArcGIS Online. Each point is collected by users at their location and consists of information about the flowers they see, including size, color, occupied land area, name, freshness, and more. Each data point is represented by the flower's color, and as you explore the map, it will show you clusters of flowers. You can contribute to making this map more vibrant by adding additional data points of flowers you encounter on the street via <a href= "https://fieldmaps.arcgis.app?referenceContext=center&itemID=b387fd3823f2430d86be43cab679f2e3&center=52.08277795215754,5.1496860249323&scale=2196.104817637565">this link!</a></p>
 									
 								</article>
 		
