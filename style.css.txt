@@ -1,4 +1,4 @@
-/* Basic Reset */
+/* ======== Global Styles ======== */
 * {
     margin: 0;
     padding: 0;
@@ -7,36 +7,98 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: white; /* Ensures the background is white */
+    background-color: white; /* Ensures full-page background is white */
     color: black;
 }
 
-/* Container for layout */
+/* ======== Navigation Bar ======== */
+nav {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #ddd;
+    border-radius: 5px;
+}
+
+/* ======== Page Layout ======== */
 .container {
     display: flex;
     max-width: 1200px;
-    margin: 40px auto;
-    background: white; /* Ensure background stays white */
+    margin: 80px auto; /* Adds space below fixed navbar */
+    background: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adds a light shadow for depth */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Adds slight shadow */
 }
 
-/* Sidebar */
+/* ======== Sidebar (Left Side Menu) ======== */
 .sidebar {
-    width: 200px;
+    width: 250px;
     background: #f4f4f4;
     padding: 20px;
     border-radius: 8px;
 }
 
-/* Main Content */
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background: #ddd;
+}
+
+/* ======== Main Content (Right Side) ======== */
 .content {
-    flex: 1;
+    flex: 1; /* Takes the remaining space */
     padding: 20px;
 }
 
-/* Project Section */
+/* ======== Project Section (Image + Description) ======== */
 .project {
     display: flex;
     align-items: center;
@@ -54,8 +116,29 @@ body {
     max-width: 500px;
 }
 
+.text h3 {
+    margin-bottom: 10px;
+}
+
+/* ======== Caption Styling ======== */
 .caption {
     font-size: 14px;
     color: gray;
     margin-top: 10px;
+}
+
+/* ======== Responsive Design (For Smaller Screens) ======== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack sidebar and content on small screens */
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar takes full width */
+        margin-bottom: 20px;
+    }
+
+    .project {
+        flex-direction: column; /* Stack image and text */
+    }
 }
