@@ -2840,18 +2840,19 @@ input, select, textarea {
 
 /* List */
 
-	ol {
-		list-style-type: decimal !important; /* Force numbering */
-    list-style-position: inside; /* Move numbers inside the list box */
-    padding-left: 0;             /* Remove unnecessary padding */
-    margin-left: 0;              /* Align list with surrounding content */
-	}
+ol {
+    list-style-type: decimal !important; 
+    list-style-position: outside; /* Numbers outside the list box */
+    padding-left: 1.5rem;        /* Space between numbers and content */
+    margin-left: 0;              
+}
 
-	ol li {
-    padding-left: 0;             /* Reset any inherited padding */
-    margin-left: 0;              /* Reset any inherited margins */
-    text-indent: 0;              /* Ensure text starts from the same line */
-	}
+ol li {
+    padding-left: 0;             
+    margin-left: 0;              
+    text-indent: 0;              
+    line-height: 1.6;            /* Improve readability by adjusting line height */
+}
 	ul {
 		list-style: disc;
 		margin: 0 0 2rem 0;
