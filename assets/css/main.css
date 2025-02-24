@@ -2840,16 +2840,17 @@ input, select, textarea {
 
 /* List */
 
-	ol {
-		list-style: decimal;
-		margin: 0 0 2rem 0;
-		padding-left: 1.25rem;
-	}
+ol {
+    list-style: decimal;      /* Ensure numbers are shown */
+    padding-left: 0;          /* Remove default space */
+    margin-left: 20px;        /* Adjust space between numbers and edge */
+}
 
-		ol li {
-			padding-left: 0.25rem;
-		}
-
+ol li {
+    display: flex;            /* Align number and text horizontally */
+    gap: 8px;                 /* Reduce space between number and text */
+    align-items: baseline;    /* Align numbers with text baseline */
+}
 	ul {
 		list-style: disc;
 		margin: 0 0 2rem 0;
