@@ -37,7 +37,8 @@ body {
 }
 
 ol, ul {
-	list-style: none;
+	list-style-position: inside; /* Moves numbers closer to content */
+    padding-left: 10px; /* Reduces space to the left of the list */
 }
 
 blockquote, q {
